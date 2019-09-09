@@ -35,9 +35,9 @@ class LinkController extends Controller
     public function store(Request $request, Link $link)
     {
 
-        $link->creatShortLink($request->all());
-        dd($link);
-        return redirect()->route('links.index');
+        $link->createShortLink($request->all());
+//        dd($link);
+        return redirect()->route('links.show');
     }
 
     /**
@@ -48,7 +48,9 @@ class LinkController extends Controller
      */
     public function show(Link $link)
     {
-        //
+        return view('links.show', [
+            'short_link' =>
+        ]);
     }
 
     /**
