@@ -34,23 +34,20 @@ class LinkController extends Controller
      */
     public function store(Request $request, Link $link)
     {
-        $link->createShortLink($request->all());
-//        dd($link);
-        return redirect()->route('links.show', ['id' => $link -> id]);
+        $link->createShortLink($request->all('full_link'));
+        return redirect() -> Route('links.show', ['id' => $link->id]);
     }
 
     /**
-     * @param int $id
+     * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show(int $id)
     {
         $link = Link::find($id);
-        $full_link = $link -> full_link;
-        $short_link = $link -> short_link;
-        return view('links.show', [
-            'full_link' => $full_link,
-            'short_link' => $short_link
+        return view('links.show',
+        [
+            'short_link' => $link -> short_link,
         ]);
     }
 
