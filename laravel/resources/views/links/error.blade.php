@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <a href="{{route('FullLink', [$short_link])}}">http://localhost/{{$short_link}}</a>
+                <h3>Пожалуйста, введите валидный адрес сайта</h3>
             </div>
         </div>
     </div>

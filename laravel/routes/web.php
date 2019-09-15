@@ -20,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('links', 'LinkController');
+
+Route::get('{short_link}', 'FullLinkController@index')->name('FullLink');
