@@ -21,12 +21,6 @@
                         </div>
                     </div>
                 </form>
-{{--                @if (isset($link))--}}
-{{--                    <div class="col-12">--}}
-{{--                        <a href="http://localhost/{{ $link->short_link }}">{{ $link->short_link }}</a>--}}
-{{--                    </div>--}}
-{{--                @endif--}}
-
             </div>
         </div>
     </div>
