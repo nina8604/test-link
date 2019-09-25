@@ -14,6 +14,7 @@
     <div id="app" class="container py-2">
         @yield('content')
     </div>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/app.js') }}">
+</script>
 </body>
 </html>
