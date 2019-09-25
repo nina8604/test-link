@@ -9,7 +9,7 @@ class FullLinkFormRequest extends FormRequest {
 
     public function rules() {
         return [
-            'full_link' => ['required', 'regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$$/']
+            'full_link' => ['required', 'url']
         ];
     }
 }

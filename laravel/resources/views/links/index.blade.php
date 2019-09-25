@@ -4,22 +4,19 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="{{route('links.store')}}" method="post">
+                <form class="form" action="{{route('links.store')}}" method="post">
                     @csrf
                     <div class="form-group row">
                         <label for="full_link" class="col-sm-2 col-form-label">Full link</label>
-                        <div class="col-sm-10 @if($errors->has('full_link')) has-error @endif">
+                        <div data-container="full_link" class="col-sm-10">
                             <input type="text" class="form-control" id="full_link" name="full_link">
-                            @if($errors->has('full_link'))
-                                @foreach ($errors->all() as $error)
-                                    <div class="help-block">{{ $error }}</div>
-                                @endforeach
-                            @endif
+                            <div class="help-block"></div>
+                            <div class="response"></div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary">Create</button>
+                            <input id="submit" type="submit" value="Create" />
                         </div>
                     </div>
                 </form>

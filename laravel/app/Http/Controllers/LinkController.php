@@ -32,7 +32,7 @@ class LinkController extends Controller
         if(!$link) {
             $link = $service -> create($full_link);
         }
-        return view('links.show', [ 'short_link' => $link->short_link]);
+        return response()->json(['short_link' => route('FullLink', [$link->short_link])]);
     }
 
 }
